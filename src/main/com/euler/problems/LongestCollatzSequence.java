@@ -11,7 +11,7 @@ import java.util.List;
 public class LongestCollatzSequence {
 
     public static void main(String[] a) {
-        System.out.println(getLongestSequence(1000000));
+        System.out.println("The longest collatz chain is produced by 4" + getLongestSequence(1000000));
     }
 
     /***
