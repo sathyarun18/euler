@@ -39,17 +39,17 @@ public class LongestCollatzSequence {
      * @return number of terms in the collatz sequence
      */
     public static int getSequenceSize(long input) {
-        //List that helps in storing the sequence to calculate the size
-        List<Long> collatzSequence = new ArrayList<>();
+        //Int that helps in storing the sequence to calculate the size
+        int collatzSize = 0;
         while(input != 1) {
-            collatzSequence.add(input);
+            collatzSize++;
             if(input %2 == 0) {
                 input = input /2;
             } else {
                 input = 3 * input +1;
             }
         }
-        //Size + 1 since 1 is the last term to be included in the list
-        return collatzSequence.size() + 1;
+        //Size + 1 since 1 is the last term to be included in the sequence
+        return collatzSize+1;
     }
 }
